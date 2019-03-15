@@ -1,6 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+
 *{
   box-sizing: border box;
 }
+body {
+  background: black;
+  color: whitesmoke;
+  font-family: 'Source Code Pro', monospace;
+}
+.page { 
+  height: 100vh;
+}
+.mast {
+  text-align: center;
+}
+#welcome {
+  font-size: 48px;
+  overflow: hidden;
+  border-right: .25em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation:
+  typing 10s steps(30) 1s 1 normal both,
+  blink-caret .9s steps(30) infinite normal;
+}
+
+
+.wrapper {
+  position: absolute;
+  top: 150px;
+  height: 60%;
+  width: 100%;
+  opacity: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  flex-grow: 1;
+  animation: emerge 14s ease-in-out;
+  
+}
+.show {
+  align-self: center;
+  margin-bottom: 5%;
+  margin-left: -30%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap; 
+  align-content: center;
+}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  width: auto;
+  height: 100px;
+  display: none;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  cursor: pointer;
+}
+
+.mySlides:hover {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 100%;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 1px;
+  position: relative;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.footer {
+  position: absolute;
+  top: 650px;
+  margin-left: 465px;
+  text-align: center;
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  animation: emerge 18s ease-in-out;
+}
+.podcast {
+  display: block;
+  align-self: center;
+  cursor: pointer;
+  justify-content: center
+}
+
+iframe {
+  position: relative;
+  right:-8px;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+.iframe:hover {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+}
+
+.contact {
+  position: relative;
+  left: 25px;
+
+}
+a {
+  position: relative;
+  top: 20%;
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: bolder;
+  
+  
+}
+.contact a:hover {
+  text-shadow: 0 1.5px 5px whitesmoke;
+}
+
+#selfie {
+  margin-left: 10px;
+  padding: 40px 40px;
+}
 img {
-  width: 10%;
+  height: 600px;
+  width: auto;
+}
+
+
+
+
+/* Keyframes*/
+@keyframes typing {
+  0% { width:0; transform: translateY(130px)scale(3);  }
+  50% { width: 10em; transform: translateY(130px)scale(3); }
+  60% { width: 10em; transform: translateY(130px)scale(3); }
+}
+@keyframes blink-caret {
+  from { border-right-color: whitesmoke; }
+  to { border-right-color: transparent; }
+}
+@keyframes emerge {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  to {  opacity: 1; } 
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }
