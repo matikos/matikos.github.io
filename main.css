@@ -86,6 +86,10 @@ body {
   user-select: none;
 }
 
+.numbertext {
+  color: blue;
+}
+
 /* Position the "next button" to the right */
 .next {
   right: 0;
